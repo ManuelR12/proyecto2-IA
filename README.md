@@ -1,63 +1,63 @@
 # Knight Energy
 
-Juego de ajedrez por turnos entre un jugador humano y la IA, implementado con el algoritmo **Minimax con poda alfa-beta** y decisiones imperfectas.
+A turn-based chess game between a human player and an AI, implemented with the **Minimax algorithm with alpha-beta pruning** and imperfect decisions.
 
-## Reglas del juego
+## Game Rules
 
-- Tablero de ajedrez 8×8.
-- Cada jugador controla un caballo y empieza con **7 unidades de energía**.
-- Cada movimiento cuesta **1 de energía**.
-- **Casillas de puntos** (valores 2, 3, 4, 5, 6, 8, 9): sumar puntos al caer en ellas.
-- **Casillas de energía** (valores 2, 3, 4, 5): recuperar energía al caer en ellas.
-- Sin energía para mover → pierde turno y −3 puntos.
-- Fin del juego: sin casillas de puntos restantes **o** ningún jugador puede mover.
-- Gana quien acumule más puntos.
+- 8×8 chess board.
+- Each player controls a knight and starts with **7 energy units**.
+- Each move costs **1 energy**.
+- **Point squares** (values 2, 3, 4, 5, 6, 8, 9): gain points when landing on them.
+- **Energy squares** (values 2, 3, 4, 5): recover energy when landing on them.
+- No energy to move → skip turn and −3 points.
+- Game ends when no point squares remain **or** neither player can move.
+- The player with the most points wins.
 
-## Niveles de dificultad
+## Difficulty Levels
 
-| Nivel        | Profundidad Minimax |
-|-------------|---------------------|
-| Principiante | 2                   |
-| Amateur      | 4                   |
-| Experto      | 6                   |
+| Level    | Minimax Depth |
+|----------|---------------|
+| Beginner | 2             |
+| Amateur  | 4             |
+| Expert   | 6             |
 
-## Estructura del proyecto
+## Project Structure
 
 ```
 proyecto2-IA/
-├── main.py               # Punto de entrada
+├── main.py               # Entry point
 ├── requirements.txt
 ├── .gitignore
 ├── src/
 │   ├── game/
-│   │   ├── board.py      # Tablero y posicionamiento aleatorio
-│   │   ├── knight.py     # Movimientos del caballo
-│   │   ├── game_state.py # Estado del juego
-│   │   └── rules.py      # Validación de reglas
+│   │   ├── board.py      # Board and random placement
+│   │   ├── knight.py     # Knight movement
+│   │   ├── game_state.py # Game state
+│   │   └── rules.py      # Rule validation
 │   ├── ai/
-│   │   ├── minimax.py    # Algoritmo Minimax con alfa-beta
-│   │   └── heuristic.py  # Función heurística de utilidad
+│   │   ├── minimax.py    # Minimax algorithm with alpha-beta
+│   │   └── heuristic.py  # Utility heuristic function
 │   └── ui/
-│       └── display.py    # Visualización en consola
+│       └── display.py    # Console display
 ├── tests/
 │   ├── test_board.py
 │   ├── test_minimax.py
 │   └── test_game.py
 └── docs/
-    └── informe.md        # Informe de la función heurística
+    └── informe.md        # Heuristic function report
 ```
 
-## Ejecución
+## Running
 
 ```bash
 pip install -r requirements.txt
 python main.py
 ```
 
-## Equipo
+## Team
 
-| Integrante | Responsabilidad principal |
-|-----------|--------------------------|
-| Persona 1 | Lógica del juego (tablero, reglas, caballos) |
-| Persona 2 | IA: Minimax, heurística e informe |
-| Persona 3 | Estado del juego, UI, integración y pruebas |
+| Member   | Main Responsibility                          |
+|----------|----------------------------------------------|
+| Member 1 | Game logic (board, rules, knights)           |
+| Member 2 | AI: Minimax, heuristic, and report           |
+| Member 3 | Game state, UI, integration, and testing     |
