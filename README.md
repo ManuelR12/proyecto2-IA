@@ -53,11 +53,3 @@ proyecto2-IA/
 pip install -r requirements.txt
 python main.py
 ```
-
-## Team
-
-| Member   | Main Responsibility                          |
-|----------|----------------------------------------------|
-| Member 1 | Game logic (board, rules, knights)           |
-| Member 2 | AI: Minimax, heuristic, and report           |
-| Member 3 | Game state, UI, integration, and testing     |
